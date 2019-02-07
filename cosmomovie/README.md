@@ -7,11 +7,11 @@
 
   2. После из корня проекта запустить команду:
 
-  `node fe-dev-server/bin/www ../cosmomovie`
+        `node fe-dev-server/bin/www ../cosmomovie`
 
   3. Зайти в папку cosmomovie и запустить сборку проекта react:
 
-  `yarn start`
+        `yarn start`
  
 
  
