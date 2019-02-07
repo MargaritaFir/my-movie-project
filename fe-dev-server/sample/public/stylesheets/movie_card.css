@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+
+
+
+/*==Style for movie card==*/
+
+.movie-card {
+  color: #A9A8A3;
+  padding:0;
+  min-height: 650px;
+  margin: 0 auto;
+  width: 100%;
+  background: #F0F0ED;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; 
+}
+.poster {
+  height: 350px; 
+  width: 250px; 
+  margin:0 auto;
+  position: relative;
+}
+
+.poster,
+.details{
+  margin-top: 20px;
+}
+
+
+.img img {
+    max-width: 100%;
+    max-height: 350px;
+    position: relative;
+    left: 50%;
+    margin-left: -125px;
+}
+
+
+.details .title {
+  color: #000;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+
+.details .text {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
+.details p,
+.details h4,
+.details span{
+  padding: 0 100px;
+}
+
+.details span{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.img .imdb {
+  position: absolute;
+  top:5%; left:65%;
+  font-weight: 600;
+  background: #C4AF3D;
+  border-radius: 5px;
+  color: #544C21;
+  font-size: 14px;
+  padding: 2px 2px;
+}
+
+
+
+
+
+@media (max-width: 650px) {
+  .movie-card{
+    width: 100%;
+    
+  }
+}
+
+
+
+

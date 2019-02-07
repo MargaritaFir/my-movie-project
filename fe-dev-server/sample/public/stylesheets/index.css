@@ -1,0 +1,107 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+*{
+  font: 14px sans-serif;
+}
+
+nav{
+  background: none;
+
+}
+
+
+
+.search-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height:500px;
+  align-items: center;
+}
+
+.search{
+  width:80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+   
+}
+.search h1{
+  font-size: 2rem;
+  margin: 20px auto;
+  
+}
+.search pre{
+  margin-top: 40px;
+}
+
+/*== Form ==*/
+
+form {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+input {
+  width: 90%;
+  padding-left: 10px;
+  border: 2px solid #30A8E6;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #000;
+}
+button {
+  margin-left: 5px;
+  width: 10%;
+  border: none;
+  background: #a52800;
+  border-radius: 2px;
+  cursor: pointer;
+
+}
+button:before {
+ font-family: "FontAwesome";
+  content: "\f002";
+  display: inline-block;
+  font-size: 2.2rem;
+}
+
+.btn-form {
+    position: relative;
+    background: #a52800;
+    border: none;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.btn-form:hover{
+   background:#fff;
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color:#000;
+}
+
+.btn-form:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+
+

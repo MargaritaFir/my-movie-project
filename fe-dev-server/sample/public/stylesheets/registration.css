@@ -1,0 +1,127 @@
+
+
+
+/*
+nav {
+    background: none; 
+}
+*/
+
+
+.regist{
+  margin: 0 auto;
+  width:60%;
+  height: 400px;
+}
+
+/*FORM */
+
+
+.security-form {
+
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+
+.security-form .form-heading,
+.security-form .form-control,
+.security-form button {
+
+    margin-bottom: 15px;
+}
+
+
+.security-form .form-heading {
+
+    font-size: 1.6em;
+}
+
+.security-form .form-control {
+
+    display: flex;
+    width: 100%;
+}
+
+.security-form .form-control i {
+
+    background: #ff9473;
+    color: white;
+
+    padding: 10px;
+    min-width: 45px;
+
+    text-align: center;
+}
+
+.security-form .form-control input {
+
+    padding: 10px;
+    width: 100%;
+
+    outline: none;
+}
+
+.security-form .form-control input:focus {
+
+    border: 2px solid #f39c12;
+}
+
+.security-form button {
+
+    font-size: 1.1em;
+
+    background: #a52800;
+    color: white;
+    opacity: 0.9;
+
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.security-form button:hover {
+
+    opacity: 1;
+}
+
+.security-form .form-heading,
+.security-form .form-alternate-link {
+
+    text-align: center;
+}
+
+/*Form interactive*/
+
+.btn-form {
+    position: relative;
+    background: #a52800;
+    border: none;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.btn-form:hover{
+   background:#fff;
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color:#000;
+}
+
+.btn-form:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}

@@ -1,0 +1,30 @@
+/*Style for profile user page*/
+
+.profile-header{
+   	background: url(../images/profile_2.jpg) no-repeat center center fixed;
+  	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	background-size: cover;
+  	width:100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+#profileImges{
+  height: 200px;
+  width: 200px;
+  margin: 15px;
+}
+
+#profileImges img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-size: contain;
+  position: relative;
+  top: 50px;
+}
+

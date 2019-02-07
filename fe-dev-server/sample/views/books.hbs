@@ -1,0 +1,16 @@
+<h1>Books list</h1>
+
+{{>nav buttons=data.nav}}
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+        </tr>
+    </thead>
+    {{#each resp}}
+        {{>book book=this}}
+    {{/each}}
+</table>
+<tr>
