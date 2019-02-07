@@ -1,0 +1,1 @@
+node ../fe-dev-server/bin/www ../cosmomovie/

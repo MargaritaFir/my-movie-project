@@ -1,0 +1,109 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+.search-form {
+  width: 60%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    position: relative;
+    background: white;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;;
+    cursor: pointer;
+    padding: 2px;
+    margin-left: 1px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6), 0 10px 10px rgba(0, 0, 0, 0.7);
+    display: block;
+    width: 50px;
+    height: 100%;
+
+  }
+
+  &__btn:before {
+    font-family: "FontAwesome";
+    content: "\f002";
+    font-size: 2.2rem;
+
+  }
+
+  &__btn:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #97B1BF;
+    color: #000;
+  }
+
+  &__btn:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  &__input {
+    width: 90%;
+    height: 100%;
+    padding-left: 10px;
+    border: 2px solid #fff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    background: #F9F0DA;
+    color: #000;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6), 0 10px 10px rgba(0, 0, 0, 0.7);
+  }
+
+}
+
+.search-imdb {
+
+  width: 100%;
+  padding-top: 30px;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /*==Путь задан относительно index.scss,который находится в папке css=*/
+  background: url(../images/bbb.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.search-imdb__wrapper {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search-imdb__wrapper p {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: inline-flex;
+  font-size: 1.4rem;
+  width: 80%;
+  line-height: 1.5;
+
+}
+
+.search-content__wrapper {
+
+}
+
+

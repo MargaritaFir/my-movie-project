@@ -1,0 +1,57 @@
+[
+  {
+    "_id": 1,
+    "login": "John",
+    "password": "12345",
+    "name": "John",
+    "email": "john077@mail.ru",
+    "image": "https://f.vividscreen.info/soft/9cd230e0d3329e2b6ce1b7158efe417c/Zac-Efron-320x240.jpg",
+    "friends": []
+  },
+  {
+    "_id": 2,
+    "login": "Tom",
+    "password": "12345",
+    "name": "Tom",
+    "email": "tom777@gmail.com",
+    "image": "https://4love.ge/uploads/posts/2017-11/thumbs/1510782057_tom_kruz.jpg",
+    "friends": []
+  },
+  {
+    "_id": 3,
+    "login": "Elena",
+    "password": "12345",
+    "name": "Elena",
+    "email": "elena_florova@mail.ru",
+    "image": "https://ae01.alicdn.com/kf/HTB1qcQhegZC2uNjSZFnq6yxZpXas/2018.jpg",
+    "friends": []
+  },
+  {
+  "_id": 4,
+  "login": "MargaritaFir",
+  "password": "12345",
+  "name": "Margarita",
+  "email": "margarita_firsova@gmail.com",
+  "image": "https://zabavnik.club/wp-content/uploads/foto_na_avu_devushek_22_22140847-300x200.jpg",
+  "friends": [
+    {
+      "_id": 2,
+      "login": "Tom",
+      "password": "12345",
+      "name": "Tom",
+      "email": "tom777@gmail.com",
+      "image": "https://4love.ge/uploads/posts/2017-11/thumbs/1510782057_tom_kruz.jpg",
+      "friends": []
+    },
+    {
+      "_id": 3,
+      "login": "Elena",
+      "password": "12345",
+      "name": "Elena",
+      "email": "elena_florova@mail.ru",
+      "image": "https://ae01.alicdn.com/kf/HTB1qcQhegZC2uNjSZFnq6yxZpXas/2018.jpg",
+      "friends": []
+    }
+  ]
+  }
+]

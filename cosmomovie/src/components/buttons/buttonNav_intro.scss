@@ -1,0 +1,43 @@
+/*Style for profile button (clicked for new view)*/
+
+#profile__friends, #profile__comments{
+  display: none;
+}
+
+.profile-header__btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+
+  a{
+    text-decoration: none;
+  }
+
+}
+
+
+
+.profile-header__btn button{
+  display: block;
+  outline: none;
+  font-weight: 600;
+  width: 100px;
+  color: #2F4F4F;
+  text-transform: uppercase;
+  background: #DAF0FF;
+  border: none;
+  border-top: none;
+  padding: 10px 5px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5), 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.profile-header__btn button:hover{
+  color: #DAF0FF;
+  background:  #253840;
+}
+
+.activeMovieButton{
+  color: #DAF0FF;
+  background:  #253840;
+}

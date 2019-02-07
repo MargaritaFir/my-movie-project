@@ -1,0 +1,164 @@
+
+.search-people{
+	padding: 20px;
+	margin: 0 auto;
+	width: 60%;
+}
+
+.people-select{
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	color: black;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.people-card{
+	background: white;
+	margin-top: 20px;
+	display: flex;
+	justify-content:space-between;
+	border-radius: 1px;
+	align-items: center;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.9), 0 10px 10px rgba(0,0,0,0.9);
+	width: 50%;
+
+	max-width: 400px;
+	padding: 0 0.8rem;
+}
+
+.people-card:hover{
+	position: relative;
+	top: -0.5px;
+}
+
+
+.people-card__avatar{
+	padding-left: 1rem;
+}
+
+.people-card__avatar>img{
+	 width: 6rem;
+	 height: 6rem;
+	 margin: 1rem 0;
+	 border-radius: 50%;
+ 
+}
+
+
+
+
+
+
+.people-card__nickName{
+	font-size: 1.4rem;
+	font-weight: 600;
+	display: flex;
+
+}
+
+.people_button_state span{
+	font-size: 1rem;
+	padding: 0.8rem;
+	text-align: center;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.3);
+
+}
+
+.people_button_state a{
+	text-decoration: none;
+	color: green;
+}
+
+.people_button_state{
+	display: flex;
+	flex-direction: column;
+}
+
+.people_button_state span:hover,
+.people_button_state a:hover {
+	color: #fff;
+	background: green;
+}
+
+.people_button_state .people-card__deleteUser:hover{
+	background: red;
+	
+
+}
+
+
+
+
+
+
+.people-card__viewProfile,
+.people-card__deleteUser,
+.people-card__addUser{
+	font-size: 1.5rem;
+	margin-top: 0.2rem;
+
+}
+
+
+.people-card__viewProfile a,
+.people-card__addUser{
+	color: #008000;
+
+}
+
+.people-card__deleteUser{
+	color: 	#8B0000;
+}
+
+
+
+
+@media (max-width: 756px){
+
+
+
+	.people-card{
+		width: 90%;
+	}
+
+}
+
+@media (max-width: 650px){
+
+
+
+	.people-card{
+		width: 80%;
+	}
+
+}
+
+
+
+@media (max-width: 450px){
+
+		.people-card,
+		.search-people{
+		width: 100%;
+	}
+
+	.people-card__nickName{
+		margin-bottom: 10px;
+	}
+
+
+
+	.people-card__viewProfile,
+	.people-card__deleteUser,
+	.people-card__addUser{
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+
+	}
+}

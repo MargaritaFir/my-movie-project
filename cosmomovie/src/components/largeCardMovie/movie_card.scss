@@ -1,0 +1,186 @@
+
+
+
+
+/*==Style for movie card==*/
+
+.big-movieCard {
+  color: #A9A8A3;
+  margin-top: 12rem;
+  padding:0;
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  margin-top: 50px;
+  background: #F0F0ED;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.6), 0 10px 10px rgba(0,0,0,0.7);
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+
+
+  &__poster {
+ 
+      position: relative;
+      width: 250px;
+ 
+  }
+
+  &__poster img {
+        height: auto; 
+        max-width: 100%;
+        border-radius: 10px;
+        position: relative;
+        top: -20%;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.6), 0 10px 10px rgba(0,0,0,0.7);
+        display: flex;
+
+
+}
+
+
+   
+}
+
+
+
+.big-movieCard__poster .imdb {
+      position: absolute;
+      right:-15%; top: -15%;
+      font-weight: 600;
+      background: #FFFF00;
+      border-radius: 2px;
+      color: #544C21;
+      font-size: 1.2rem;
+      padding: 2px 2px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.6), 0 10px 10px rgba(0,0,0,0.7);
+}
+
+
+.movie-details{
+  padding-bottom:  10px;
+
+  .movie-title {
+      color: #000;
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+  }
+}
+
+
+
+
+
+.movie-info{
+   font-size: 1.3rem;
+   margin-bottom: 1.5rem;
+   font-family: 'Open Sans', sans-serif;
+
+   span{
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #000;
+      font-family: 'Open Sans', sans-serif;
+    }
+}
+
+
+
+
+
+.movies-actions {
+
+    li {
+        display: inline;
+        font-size: 1.5rem;
+    }
+
+    li.year {
+        padding-right: 0.5rem;
+        border-right: 2px solid #000;
+    }
+
+    li.runtime {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 996px) {
+
+  .big-movieCard{
+    width: 85%;
+    border-radius:5px;
+  }
+
+
+
+
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .big-movieCard{
+    width: 90%;
+    border-radius:5px;
+  }
+
+
+
+  .big-movieCard__poster {
+ 
+  width: 200px;
+  margin-right: 1rem;
+ 
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+
+
+  .big-movieCard{
+    width: 90%;
+  }
+
+
+  .big-movieCard__poster {
+ 
+  width: 150px;
+ 
+}
+
+
+.movie-details{
+  text-align: center;
+}
+
+
+
+
+}
+
+
+
+
+
