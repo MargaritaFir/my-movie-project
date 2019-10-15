@@ -1,5 +1,6 @@
 import {moviesRequests} from "../../server/moviesRequests";
 import {baseMoviesRequests} from "../../server/movieBaseRequests";
+import {tmdbRequests} from "../../server/tmdbRequests";
 
 
 export const movieDetailsActionType = {
@@ -82,11 +83,25 @@ function loadMovieFromBaseById(id) {
     };
 }
 
+
+function loadMovieByIdAndQuery(id) {
+    return (dispatch, getState) => {
+        dispatch(movieDetailsStartLoading(true));
+        return tmdbRequests.getMovieByQuery(id, getState())
+            .then(movieDetails => {
+                dispatch(movieDetailsLoadingSuccess(movieDetails));
+            })
+            .catch(err => {
+                dispatch(movieDetailsLoadingFailed(err));
+            });
+    };
+}
 export const movieDetailsActions = {
     loadMovieById,
     movieDetailsStartLoading,
     movieDetailsLoadingSuccess,
     movieDetailsLoadingFailed,
     loadMovieFromBaseById,
-    addNewComment
+    addNewComment,
+    loadMovieByIdAndQuery
 };

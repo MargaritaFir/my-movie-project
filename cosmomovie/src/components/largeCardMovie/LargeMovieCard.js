@@ -35,11 +35,12 @@ class LargeMovieCard extends Component {
             return (<div>...</div>);
         }
 
+            console.log(this.props.movieDetails.movie[0])
 
         return (
             <div>
 
-                <DetailsCardMovie {...this.props.movieDetails.movie}
+                <DetailsCardMovie {...this.props.movieDetails.movie.results[0]}
                                   onWatch={() => this.onWatch(movie)}
                                   onAdd={() => this.onAdd(movie, this.props.userId)}
                 />
@@ -94,7 +95,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         loadCurrentMovie() {
             const id = ownProps.match.params.id; // get id from router
             console.log('loadCurrentMovie', ownProps);
-            dispatch(movieDetailsActions.loadMovieFromBaseById(id));
+            dispatch(movieDetailsActions.loadMovieByIdAndQuery(id));
+            //dispatch(movieDetailsActions.loadMovieFromBaseById(id));
         },
         toggleWatchedStatus: (movieDetails) => dispatch(movieListActions.toggleWatchedStatus(movieDetails)),
         addNewMovieList: (movieDetails, userId) => dispatch(movieListActions.addNewMovieList(movieDetails, userId)),

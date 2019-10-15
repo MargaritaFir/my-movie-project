@@ -12,29 +12,29 @@ class DetailsCardMovie extends Component{
                     <div className=" row big-movieCard__poster ">
                         <div className="big-movieCard__poster">
 
-                            <img src={this.props.Poster} alt="This movie has not poster"/>
-                            <span className="imdb">IMDb: {this.props.imdbRating}</span>
+                            <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${this.props.poster_path}`} alt="This movie has not poster"/>
+                            <span className="imdb">IMDb: {this.props.vote_average}</span>
                         </div>
                     </div>
 
 
                     <div className="movie-details col-8">
 
-                        <div className="movie-title">{this.props.Title}</div>
+                        <div className="movie-title">{this.props.title}</div>
                         <div className="movie-info">
                             <ul className="movies-actions">
-                                <li className="year">{this.props.Year}</li>
-                                <li className="runtime">{this.props.Runtime}</li>
+                                    {/* <li className="year">{this.props.Year}</li>
+                                    <li className="runtime">{this.props.Runtime}</li> */}
                             </ul>
                         </div>
-                        <div className="movie-info"><span>Released: </span>{this.props.Released}</div>
+                        <div className="movie-info"><span>Released: </span>{this.props.release_date}</div>
 
-                        <div className="movie-info"><span>Actors: </span>{this.props.Actors}</div>
+                        {/* <div className="movie-info"><span>Actors: </span>{this.props.Actors}</div> */}
 
-                        <div className="movie-info"><span>Description: </span>{this.props.Plot}
+                        <div className="movie-info"><span>Description: </span>{this.props.overview}
                         </div>
-                        <div className="movie-info"><span>Genre: </span>{this.props.Genre}
-                        </div>
+                        {/* <div className="movie-info"><span>Genre: </span>{this.props.Genre}
+                        </div> */}
 
                         {
                             !this.props.authenticated ? null : (

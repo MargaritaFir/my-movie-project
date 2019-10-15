@@ -49,6 +49,8 @@ export function loadMovieListForSearch() {
     };
 }
 
+
+
 export const tmdbActions = {
     allMoviesHasErrored,
     allMoviesIsLoading,
