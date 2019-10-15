@@ -22,6 +22,7 @@
 Для создания своего проекта скопируйте все файлы из ```/sample``` в свою директорию и запускайте сервер командой
 ```
     node ./bin/www ../path-to-settings-file-in-my-project
+    node ./bin/www ../cosmomovie
 ```  
 ### Статические файлы
 Укажите ``staticPath`` в  ``settings.js``. Файлы из этой папки будут доступны по адресу ``http://localhost:3000/``

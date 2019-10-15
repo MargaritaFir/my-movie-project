@@ -5,10 +5,10 @@ const SmallCardForSearch = (props) => (
 
     <div className="poster">
         <div className="poster__wrapper">
-            <img className="poster__image" src={props.Poster} alt=""/>
+        <img className="poster__image" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${props.poster_path}`}  alt=""/>
             <div className="poster__header">
                 <div className="poster__rating">
-                    <span>{props.imdbRating}</span>
+                    <span>{props.vote_average}</span>
                 </div>
 
             </div>
@@ -16,10 +16,10 @@ const SmallCardForSearch = (props) => (
 
                 <div className="poster__content">
 
-                    <span className="poster__year">{props.Year}</span>
-                    <h3 className="poster__title"><Link className="js-title" to={`/searchmovie/${props._id}`} >{props.Title}</Link></h3>
-                    <p className="poster__actors">{props.Actors}</p>
-                    <Link to={`/searchmovie/${props._id}`} className="poster__button">Read more</Link>
+                    <span className="poster__year">{props.release_date}</span>
+                    <h3 className="poster__title"><Link className="js-title" to={`/searchmovie/${props.id}`} >{props.title}</Link></h3>
+                    {/* <p className="poster__actors">{props.Actors}</p> */}
+                    <Link to={`/searchmovie/${props.id}`} className="poster__button">Read more</Link>
                 </div>
             </div>
         </div>

@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import 'whatwg-fetch';
 import {connect} from 'react-redux';
-import {loadMovieListForSearch, movieBaseActions} from "../../store/actions/movieBaseAction";
+//import {loadMovieListForSearch, movieBaseActions} from "../../store/actions/movieBaseAction";
+import { loadMovieListForSearch, tmdbActions} from "../../store/actions/tmdbActions";
 import SmallCardForSearch from "./SmallCardForSearch";
 
 
@@ -13,6 +14,8 @@ class Search extends Component {
     }
 
     render() {
+
+        console.log(this.props)
 
         if (this.props.hasErrored) {
             return <p>Sorry! There was an error loading the movies</p>;
@@ -34,7 +37,7 @@ class Search extends Component {
 
                 <div className="poster__row ">
 
-                    {this.props.moviesBase.map((movie,i) => {
+                    { this.props.moviesBase.map((movie,i) => {
                         return <SmallCardForSearch  key={i} {...movie}/>
                     })}
 
@@ -61,7 +64,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        loadMovieListForSearch: () => dispatch(movieBaseActions.loadMovieListForSearch()),
+        loadMovieListForSearch: () => dispatch(tmdbActions.loadMovieListForSearch()),
     };
 };
 
