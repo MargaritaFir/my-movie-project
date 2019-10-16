@@ -8,7 +8,8 @@ export const movieDetailsActionType = {
     MOVIE_DETAILS_LOADING_SUCCESS: 'MOVIE_DETAILS_LOADING_SUCCESS',
     MOVIE_DETAILS_LOADING_FAILURE: 'MOVIE_DETAILS_LOADING_FAILURE',
     ADD_NEW_MOVIE: 'ADD_NEW_MOVIE',
-    ADD_COMMENT: 'ADD_COMMENT'
+    ADD_COMMENT: 'ADD_COMMENT',
+    MOVIE_DETAILS_LOADING_SUCCESS_TMDB: 'MOVIE_DETAILS_LOADING_SUCCESS_TMDB'
 };
 
 function movieDetailsStartLoading() {
@@ -21,6 +22,13 @@ function movieDetailsLoadingSuccess(movie) {
     return {
         type: movieDetailsActionType.MOVIE_DETAILS_LOADING_SUCCESS,
         movie: movie
+    }
+}
+
+function movieDetailsLoadingSuccessTMDB(movie) {
+    return {
+        type: movieDetailsActionType.MOVIE_DETAILS_LOADING_SUCCESS_TMDB,
+        movie: movie.results[0]
     }
 }
 
@@ -89,7 +97,7 @@ function loadMovieByIdAndQuery(id) {
         dispatch(movieDetailsStartLoading(true));
         return tmdbRequests.getMovieByQuery(id, getState())
             .then(movieDetails => {
-                dispatch(movieDetailsLoadingSuccess(movieDetails));
+                dispatch(movieDetailsLoadingSuccessTMDB(movieDetails));
             })
             .catch(err => {
                 dispatch(movieDetailsLoadingFailed(err));
@@ -103,5 +111,6 @@ export const movieDetailsActions = {
     movieDetailsLoadingFailed,
     loadMovieFromBaseById,
     addNewComment,
-    loadMovieByIdAndQuery
+    loadMovieByIdAndQuery,
+    movieDetailsLoadingSuccessTMDB
 };

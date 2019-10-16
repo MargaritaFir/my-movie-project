@@ -23,6 +23,12 @@ export function movieDetailsReducer(state = initialState, action) {
                 movie: action.movie,
             };
 
+        case movieDetailsActionType.MOVIE_DETAILS_LOADING_SUCCESS_TMDB :
+            return {
+                ...state,
+                isLoading: false,
+                movie: action.movie,
+            }
         case movieDetailsActionType.MOVIE_DETAILS_LOADING_FAILURE :
             return {
                 ...state,

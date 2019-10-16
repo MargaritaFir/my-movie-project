@@ -34,6 +34,17 @@ function getMovieByQuery(query) {
         })
         .then((response) => response.json())
 } 
+
+// function getMovieByQuery(query) {
+//     return fetch(`http://www.omdbapi.com/?t=${query}&apikey=7694ce07`)
+//         .then((response) => {
+//             if (!response.ok) {
+//                 throw Error(response.statusText);
+//             }
+//             return response;
+//         })
+//         .then((response) => response.json())
+// } 
 export const tmdbRequests ={
     getPopularMovies, 
     searchMovie,

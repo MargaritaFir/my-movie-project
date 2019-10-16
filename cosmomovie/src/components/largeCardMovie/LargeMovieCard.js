@@ -35,12 +35,11 @@ class LargeMovieCard extends Component {
             return (<div>...</div>);
         }
 
-            console.log(this.props.movieDetails.movie[0])
 
         return (
             <div>
 
-                <DetailsCardMovie {...this.props.movieDetails.movie.results[0]}
+                <DetailsCardMovie {...this.props.movieDetails.movie}
                                   onWatch={() => this.onWatch(movie)}
                                   onAdd={() => this.onAdd(movie, this.props.userId)}
                 />
