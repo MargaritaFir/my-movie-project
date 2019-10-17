@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import 'whatwg-fetch';
 import {connect} from 'react-redux';
-import FormSearchFriends from "../filters/formAutocomplite/FormSearchFrends";
+//import FormSearchFriends from "../filters/formAutocomplite/FormSearchFrends";
 import SmallUserCard from "../smallUserCard/SmallUserCard";
 import {loadUsersSelect, usersSelectActions} from "../../store/actions/usersSelectActions";
 import {userActions} from "../../store/actions/userActions";

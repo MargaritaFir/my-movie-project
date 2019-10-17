@@ -4,14 +4,11 @@ import {users, usersHasErrored, usersIsLoading} from "./usersSelectReducer";
 import {movieDetailsReducer} from "./movieDetailsReducer";
 import {reducer as formReducer } from 'redux-form';
 //import {allMoviesHasErrored, allMoviesIsLoading, moviesBase} from "./movieBaseReducer"
-import {allMoviesHasErrored, allMoviesIsLoading, moviesBase} from "./tmdbReducer"
+import {moviesBase} from "./tmdbReducer"
 import {userReducer} from "./userReducer";
 import {friendsViewReducer} from "./friendsViewReducer";
 
 export const rootReducer = combineReducers({
-    allMoviesHasErrored,
-    allMoviesIsLoading,
-    moviesBase,
     movies,
     moviesHasErrored,
     moviesIsLoading,
@@ -22,6 +19,7 @@ export const rootReducer = combineReducers({
     form: formReducer,
     user: userReducer,
     currentUser:friendsViewReducer,
+    moviesBase:moviesBase
 
 });
 

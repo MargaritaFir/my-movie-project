@@ -25,7 +25,8 @@ function searchMovie(query){
 }
 
 function getMovieByQuery(query) {
-    return fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=cfe422613b250f702980a3bbf9e90716`)
+    if(query !=="" || null||undefined){
+        return fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=cfe422613b250f702980a3bbf9e90716`)
         .then((response) => {
             if (!response.ok) {
                 throw Error(response.statusText);
@@ -33,6 +34,11 @@ function getMovieByQuery(query) {
             return response;
         })
         .then((response) => response.json())
+    } else {
+        return getPopularMovies()
+    }
+    
+
 } 
 
 // function getMovieByQuery(query) {

@@ -5,17 +5,20 @@ import {connect} from 'react-redux';
 //import {loadMovieListForSearch, movieBaseActions} from "../../store/actions/movieBaseAction";
 import { loadMovieListForSearch, tmdbActions} from "../../store/actions/tmdbActions";
 import SmallCardForSearch from "./SmallCardForSearch";
+import FormSearch from '../filters/formAutocomplite/FormSearch'
 
 
 class Search extends Component {
+
 
     componentDidMount() {
         this.props.loadMovieListForSearch();
     }
 
-    render() {
 
-        console.log(this.props)
+
+    render() {
+        
 
         if (this.props.hasErrored) {
             return <p>Sorry! There was an error loading the movies</p>;
@@ -28,16 +31,17 @@ class Search extends Component {
         return (
 
             <>
+
                 <div className="search-imdb">
                     <div className="search-imdb__wrapper">
                         <h1 className="search-imdb__title">СosmoMovies space collection</h1>
-
+                        <FormSearch onInput ={(query) =>this.onInput(query)}/>
                     </div>
                 </div>
 
                 <div className="poster__row ">
 
-                    { this.props.moviesBase.map((movie,i) => {
+                    { this.props.moviesBase.moviesBase.map((movie,i) => {
                         return <SmallCardForSearch  key={i} {...movie}/>
                     })}
 
@@ -45,7 +49,18 @@ class Search extends Component {
             </>
         )
     }
+    onInput(query){
+        if(query === ""){
+            query = 'a';
+            this.props.searchMovie(query)
+        } else{
+        this.props.searchMovie(query)
+        }
+    }
 }
+
+
+
 
 Search.propTypes = {
     loadMovieListForSearch: PropTypes.func.isRequired,
@@ -64,7 +79,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+
         loadMovieListForSearch: () => dispatch(tmdbActions.loadMovieListForSearch()),
+        searchMovie: (query) => dispatch(tmdbActions.loadQueryListMovie(query))
     };
 };
 
