@@ -19,6 +19,15 @@ const initialState = {
 export function userReducer(state = initialState, action) {
     console.log(state, action, userActionsTypes);
     switch (action.type) {
+        case userActionsTypes.CREATE_NEW_USER: 
+        return {
+            ...state,
+            authenticated: true,
+            userInfo: action.userInfo[0],
+            isAuthFailed: false,
+            authFailureError: '',
+        };
+
         case userActionsTypes.AUTHENTICATION_SUCCESS:
             return {
                 ...state,

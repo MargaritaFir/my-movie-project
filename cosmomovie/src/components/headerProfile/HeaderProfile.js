@@ -7,7 +7,9 @@ import connect from "react-redux/es/connect/connect";
 
 
 class HeaderProfile extends Component {
+    
     render() {
+        console.log(this.props);
         return (
             <div>
                 <div className="row profile-header" >
@@ -17,9 +19,9 @@ class HeaderProfile extends Component {
                     </div>
                     <div className="profile-info" >
                         <div className="profile-info__nickName">{this.props.name}</div>
-                        <div>{this.props.email}</div>
+                         <div> { this.props.email}</div>
                     </div>
-                    { this.props.loggedUser.friends && this.props.loggedUser.friends.find((friend => friend._id ===this.props._id))?
+                    { this.props.loggedUser.friends && (this.props.loggedUser.friends.find((friend => friend._id ===this.props._id)))?
                         (<div id="otherProfile_yourFriends">Your friend</div>):""}
 
                     <Route path="/mymovies" component={ButtonMovie} />

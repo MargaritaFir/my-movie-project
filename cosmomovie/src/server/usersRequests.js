@@ -59,6 +59,42 @@ function loginRequest(user) {
         .then((response) => response.json())
 }
 
+function singnIn(newUser){
+    const headers = new Headers();
+    headers.append("Content-Type", "application/json; charset=utf-8");
+    const init = {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(newUser)     
+    };
+
+    
+    console.log(init);
+
+    return fetch(`${paths.users}`, init)
+        .then((response) => {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response;
+        })
+        .then((response) => response.json())
+}
+
+
+function createNewUser(newUser){
+    return getAllUsers()
+    .then(response => {
+        if (!response.find(user => user.email === newUser.email )){
+            console.log(newUser)
+            return newUser
+        } else {
+            throw new Error('User is exist');
+        }
+    })
+    .then(user => singnIn(user))  
+}
+
 export function addToFriends(user) {
     const id = user._id;
 
@@ -110,5 +146,6 @@ export const usersRequests = {
     login,
     loginRequest,
     addToFriends,
-    deleteFriend
+    deleteFriend,
+    createNewUser
 };

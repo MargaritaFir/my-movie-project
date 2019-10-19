@@ -1,7 +1,6 @@
 import {usersRequests} from "../../server/usersRequests";
 import {userActionsTypes} from "./actionTypes";
-import {moviesRequests} from "../../server/moviesRequests";
-import {loadMovieList} from "./movieListActions";
+
 
 
 function loginSuccess(user) {
@@ -15,6 +14,19 @@ function authError(error) {
     return {
         type: userActionsTypes.AUTHENTICATION_ERROR,
        error,
+    }
+}
+function createNewUser(user){
+    return {
+        type: userActionsTypes.CREATE_NEW_USER,
+        userInfo: user
+    }
+}
+
+function errorCreateUser(errorCreate){
+    return {
+        type: userActionsTypes.ERROR_CREATE_USER,
+        errorCreate
     }
 }
 
@@ -39,8 +51,26 @@ const signIn = (email, password) => dispatch => {
         .catch(error => dispatch(authError(error.toString())));
 };
 
-const createUser = (user) => dispatch => {
+const createUser = (name, NickName, email, password) => {
 
+        const newUser = {
+            _id: 6,
+            name: name,
+            NickName: NickName,
+            image: "https://ae01.alicdn.com/kf/HTB1qcQhegZC2uNjSZFnq6yxZpXas/2018.jpg",
+            email: email,
+            password: password,
+            friends: []
+        };
+        console.log(newUser);
+
+        return (dispatch) => {
+            return usersRequests.createNewUser(newUser)
+                                .then(user => dispatch(createNewUser(user)))
+                               // .then(({email, password}) => dispatch(signIn(email, password)))
+                              //  .then(user => dispatch(loginSuccess(user)))
+                                .catch((error) => dispatch(errorCreateUser(error.toString())))
+        }
     // return usersRequests.login(email, password)
     //     .then(user => {
     //         localStorage.setItem('token', user.token);
@@ -116,6 +146,7 @@ export const userActions = {
     addFriendSuccess,
     addFriendError,
     addFriend,
-    deleteFriendStatus
+    deleteFriendStatus,
+    createUser
 };
 

@@ -50,7 +50,7 @@ class Search extends Component {
         )
     }
     onInput(query){
-        if(query === ""){
+        if(query === "" || query ==="f"){
             query = 'a';
             this.props.searchMovie(query)
         } else{
