@@ -45,8 +45,19 @@ export function userReducer(state = initialState, action) {
             };
 
         case userActionsTypes.UNAUTHENTICATED:
+            console.log(action)
             return {
                 ...state,
+                userInfo: {
+                    _id: 0,
+                    login: '',
+                    email: '',
+                    password: '',
+                    name: '',
+                    image: '',
+                    friends: [],
+                    token: '',
+                },
                 authenticated: false,
             };
         case userActionsTypes.ADD_FRIENDS_SUCCESS:

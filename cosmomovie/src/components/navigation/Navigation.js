@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {Link, NavLink} from 'react-router-dom';
+import {userActions} from "../../store/actions/userActions";
+import PropTypes from "prop-types";
 
-class Navigation extends Component {
-    render() {
+const Navigation = (props)  => {
+
+
+
         return (
             <div className="navbar-wrapper">
 
@@ -15,20 +19,20 @@ class Navigation extends Component {
                         <ul className="menu-lg">
                             <li className="list-item"><Link to='/search' className="link"
                                                                >Search</Link></li>
-                            { this.props.authenticated ? null : (
+                            { props.authenticated ? null : (
                                 <li className="list-item"><Link to='/' className="link"
                                                                  >Login</Link></li>
                             )
                             }
                             {
-                                !this.props.authenticated ? null : (
+                                !props.authenticated ? null : (
                                     <React.Fragment>
                                         <li className="list-item"><Link to='/mymovies' className="link">My
                                             Movie</Link></li>
                                         <li className="list-item"><Link to='/myfriends' className="link"
                                                                            >Friends</Link></li>
 
-                                        <li className="list-item"><Link to='/' className="link">Logout</Link></li>
+                                        <li className="list-item" onClick={props.logoutAccaunt}><Link to='/' className="link">Logout</Link></li>
                                     </React.Fragment>)
                             }
                         </ul>
@@ -40,12 +44,12 @@ class Navigation extends Component {
                         <span> </span>
                         <ul id="menu">
                             <li><Link to='/search'>Search</Link></li>
-                            { this.props.authenticated ? null : (
+                            { props.authenticated ? null : (
 
 
                                 <li><Link to='/'>Login</Link></li>)}
                             {
-                                !this.props.authenticated ? null : (
+                                !props.authenticated ? null : (
                                     <React.Fragment>
                                     <li><Link to="/mymovies">My movies</Link></li>
                                     <li> < Link to="/myfriends">Friends</Link></li>
@@ -59,8 +63,16 @@ class Navigation extends Component {
                 </nav>
             </div>
         );
-    }
+
+
 }
+
+
+
+Navigation.propTypes ={
+        logoutAccaunt: PropTypes.func.isRequired
+}
+
 
 function mapStateToProps(state) {
     return {
@@ -69,4 +81,12 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Navigation);
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        logoutAccaunt: () =>dispatch(userActions.signOut())
+    }
+    
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
