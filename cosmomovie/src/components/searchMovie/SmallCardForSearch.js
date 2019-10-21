@@ -18,7 +18,6 @@ const SmallCardForSearch = (props) => (
 
                     <span className="poster__year">{props.release_date}</span>
                     <h3 className="poster__title"><Link className="js-title" to={`/searchmovie/${props.title}`} >{props.title}</Link></h3>
-                    {/* <p className="poster__actors">{props.Actors}</p> */}
                     <Link to={`/searchmovie/${props.title}`} className="poster__button">Read more</Link>
                 </div>
             </div>

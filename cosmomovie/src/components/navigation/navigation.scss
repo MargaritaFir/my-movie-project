@@ -18,7 +18,7 @@ nav {
   flex-wrap: wrap;
   position: relative;
   box-shadow: 0 5px 5px rgba(0,0,0,0.5), 0 5px 5px rgba(0,0,0,0.5);
-  height: 8vh;
+  max-height: 100px;
 }
 
 .logo {
@@ -46,7 +46,7 @@ nav {
   height: 100%;
   display: block;
   color: #ccc;
-  padding: 30px;
+  padding: 35px;
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none;
@@ -72,6 +72,9 @@ nav {
   font-weight: 600;
   color: white;
   transition: color 0.3s ease;
+  padding: 10px 10px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 
@@ -79,7 +82,7 @@ nav {
   color: #ccc;
   width: 100%;
   list-style: none;
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 
 #menuToggle a:hover{
@@ -91,6 +94,7 @@ nav {
   display: block;
   position: relative;
   z-index: 2;
+  margin-right: -10px;
 
 
 }
@@ -186,7 +190,8 @@ nav {
 @media (max-width: 992px){
   #menuToggle{
     display: block;
-    margin-right: 5%;
+    margin-right: 3%;
+    max-height: 100px;
   }
   #menuLarge{
     display: none;

@@ -50,7 +50,7 @@ export function loadQueryMoviesTMDB(moviesBase){
 
 export function loadMovieListForSearch() {
     return (dispatch) => {
-        console.log('loadMovieList');
+
         dispatch(allMoviesIsLoading(true));
 
         return tmdbRequests.getPopularMovies()
@@ -68,7 +68,7 @@ export function loadMovieListForSearch() {
 
 export function loadQueryListMovie(query) {
     return (dispatch) => {
-        console.log('loadMovieList');
+
         dispatch(allMoviesIsLoading(true));
         dispatch(updateQuery(query))
 

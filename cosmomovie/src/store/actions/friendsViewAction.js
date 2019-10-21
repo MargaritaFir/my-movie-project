@@ -1,4 +1,3 @@
-import {userActionsTypes} from "./actionTypes";
 import {usersRequests} from "../../server/usersRequests";
 import {friendsViewActionTypes} from "./actionTypes";
 

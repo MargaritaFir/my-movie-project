@@ -32,7 +32,7 @@ function errorCreateUser(errorCreate){
 
 function signOut() {
     localStorage.clear();
-    console.log('doing')
+
     return {
         type: userActionsTypes.UNAUTHENTICATED
     };

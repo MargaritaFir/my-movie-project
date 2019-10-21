@@ -4,9 +4,8 @@ import 'whatwg-fetch';
 import {connect} from 'react-redux';
 //import FormSearchFriends from "../filters/formAutocomplite/FormSearchFrends";
 import SmallUserCard from "../smallUserCard/SmallUserCard";
-import {loadUsersSelect, usersSelectActions} from "../../store/actions/usersSelectActions";
+import { usersSelectActions} from "../../store/actions/usersSelectActions";
 import {userActions} from "../../store/actions/userActions";
-import UserFriends from "../userProfile/userFriends/UserFriends";
 
 class UsersPage extends Component {
 
@@ -50,12 +49,10 @@ class UsersPage extends Component {
     }
 
     onAddFriend(loggedUser, user) {
-        console.log('onWatch', user);
         this.props.addFriend(loggedUser, user);
     }
 
     onDeleteFriend(loggedUser, user) {
-        console.log('onWatch', user);
         this.props.deleteFriendStatus(loggedUser, user);
     }
 }

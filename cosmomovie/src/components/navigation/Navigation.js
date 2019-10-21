@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {userActions} from "../../store/actions/userActions";
 import PropTypes from "prop-types";
 
@@ -53,7 +53,7 @@ const Navigation = (props)  => {
                                     <React.Fragment>
                                     <li><Link to="/mymovies">My movies</Link></li>
                                     <li> < Link to="/myfriends">Friends</Link></li>
-                                <li><Link to="/" >Logout</Link></li>
+                                <li><Link to="/" onClick={props.logoutAccaunt} >Logout</Link></li>
                                 </React.Fragment>)
                             }
 

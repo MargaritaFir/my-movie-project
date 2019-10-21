@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import 'whatwg-fetch';
 import {connect} from 'react-redux';
-import {loadMovieList, movieListActions} from "../../../store/actions/movieListActions";
+import { movieListActions} from "../../../store/actions/movieListActions";
 import MovieRowTable from './singleRowMovie/MovieRowTable';
 
 
@@ -40,11 +40,9 @@ class TableViewMovies extends Component {
     }
 
     onWatch(movie) {
-        console.log('onWatch', movie);
         this.props.toggleWatchedStatus(movie);
     }
     onDelete(movie) {
-        console.log('onDelete', movie);
         this.props.toggleDeleteStatus(movie);
     }
 

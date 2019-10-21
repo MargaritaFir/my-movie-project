@@ -18,7 +18,6 @@ const MovieCard = (props) => (
 
                     <span className="poster__year">{props.release_date}</span>
                     <h3 className="poster__title"><Link className="js-title" to={`/movie/${props._id}`} >{props.title}</Link></h3>
-                    {/* <p className="poster__actors">{props.Actors}</p> */}
                     <Link to={`/movie/${props._id}`} className="poster__button">Read more</Link>
                 </div>
             </div>

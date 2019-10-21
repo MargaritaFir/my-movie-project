@@ -2,8 +2,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import 'whatwg-fetch';
 import {connect} from 'react-redux';
-//import {loadMovieListForSearch, movieBaseActions} from "../../store/actions/movieBaseAction";
-import { loadMovieListForSearch, tmdbActions} from "../../store/actions/tmdbActions";
+import { tmdbActions} from "../../store/actions/tmdbActions";
 import SmallCardForSearch from "./SmallCardForSearch";
 import FormSearch from '../filters/formAutocomplite/FormSearch'
 

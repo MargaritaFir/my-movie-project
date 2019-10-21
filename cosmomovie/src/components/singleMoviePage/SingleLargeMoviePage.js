@@ -1,13 +1,12 @@
 import React, {Component, Fragment} from 'react';
 import CommentForm from "../commentForm/CommentForm";
-
 import DetailsCardMovie from "../shared/DetailsCardMovie";
 import PropTypes from "prop-types";
 import {movieDetailsActions} from "../../store/actions/movieDetailActions";
 import connect from "react-redux/es/connect/connect";
 import {movieListActions} from "../../store/actions/movieListActions";
 import Comment from "../singleComment/Comment";
-import SmallUserCard from "../smallUserCard/SmallUserCard";
+
 
 
 
@@ -39,7 +38,7 @@ class SingleLargeMoviePage extends Component {
     displayCard() {
         const movie = this.props.movieDetails.movie;
 
-        console.log('movie', movie);
+
 
         if (!movie) {
             return (<div>Not FOUND</div>);
@@ -108,7 +107,7 @@ SingleLargeMoviePage.propTypes = {
 
 const mapStateToProps = (state) => {
     const loggedUser = state.user.userInfo;
-    console.log('mapStateToProps', state);
+
     return {
         movieDetails: state.movieDetails,
         loggedUser:loggedUser,
@@ -120,7 +119,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         loadCurrentMovie() {
             const id = ownProps.match.params.id; // get id from router
-            console.log('loadCurrentMovie', ownProps);
+            
             dispatch(movieDetailsActions.loadMovieById(id));
         },
         toggleWatchedStatus: (movieDetails) => dispatch(movieListActions.toggleWatchedStatus(movieDetails)),

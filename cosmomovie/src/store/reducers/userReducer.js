@@ -17,7 +17,6 @@ const initialState = {
 };
 
 export function userReducer(state = initialState, action) {
-    console.log(state, action, userActionsTypes);
     switch (action.type) {
         case userActionsTypes.CREATE_NEW_USER: 
         return {
@@ -45,7 +44,6 @@ export function userReducer(state = initialState, action) {
             };
 
         case userActionsTypes.UNAUTHENTICATED:
-            console.log(action)
             return {
                 ...state,
                 userInfo: {
@@ -71,7 +69,6 @@ export function userReducer(state = initialState, action) {
         };
 
         case userActionsTypes.DELETE_FRIENDS:
-            const id = action.friends._id;
             return {
                 ...state,
                 userInfo: {

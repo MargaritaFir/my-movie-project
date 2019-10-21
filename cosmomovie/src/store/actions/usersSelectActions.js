@@ -32,7 +32,7 @@ function usersHasErrored(bool) {
 
 export function loadUsersSelect() {
     return (dispatch) => {
-        console.log('loadUsersSelect');
+
         dispatch(usersIsLoading(true));
 
         return usersRequests.getAllUsers()

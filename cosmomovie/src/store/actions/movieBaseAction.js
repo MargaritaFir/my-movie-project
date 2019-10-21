@@ -1,5 +1,4 @@
 import { baseMoviesRequests} from "../../server/movieBaseRequests";
-import {movieListActionType} from "./movieListActions";
 
 export const allMovieListActionType = {
     ALL_MOVIES_HAS_ERRORED: 'ALL_MOVIES_HAS_ERRORED',

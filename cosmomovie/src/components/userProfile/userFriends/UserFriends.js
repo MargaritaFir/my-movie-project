@@ -4,7 +4,7 @@ import 'whatwg-fetch';
 import {connect} from 'react-redux';
 
 import SmallUserCard from "../../smallUserCard/SmallUserCard";
-import {loadUsersSelect, usersSelectActions} from "../../../store/actions/usersSelectActions";
+import { usersSelectActions} from "../../../store/actions/usersSelectActions";
 import {userActions} from "../../../store/actions/userActions";
 
 class UserFriends extends Component {
@@ -42,7 +42,6 @@ class UserFriends extends Component {
         )
     }
     onDeleteFriend(loggedUser, user ) {
-        console.log('onWatch', user);
         this.props.deleteFriendStatus(loggedUser, user);
     }
 }

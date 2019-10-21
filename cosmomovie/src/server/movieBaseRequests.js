@@ -1,4 +1,4 @@
-import {movieListActionType} from "../store/actions/movieListActions";
+
 
 const paths = {
     movies: '/api/movies',

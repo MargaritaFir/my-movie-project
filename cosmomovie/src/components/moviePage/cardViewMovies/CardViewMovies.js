@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MovieCard from './singleMovieCard/MovieCard';
 import 'whatwg-fetch';
 import { connect } from 'react-redux';
-import {loadMovieList, movieListActions} from "../../../store/actions/movieListActions";
+import {loadMovieList} from "../../../store/actions/movieListActions";
 
 
 

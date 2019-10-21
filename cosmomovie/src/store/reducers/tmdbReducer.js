@@ -10,7 +10,6 @@ const initialState = {
 
 
 export function moviesBase(state = initialState, action) {
-    console.log(initialState,action)
     switch (action.type) {
         case tmdbActionType.ALL_MOVIES_HAS_ERRORED:
                 return  action.hasErrored;
