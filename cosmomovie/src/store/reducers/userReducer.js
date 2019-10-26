@@ -14,6 +14,7 @@ const initialState = {
     },
     isAuthFailed: false,
     authFailureError: '',
+    errorRegistrUser: ''
 };
 
 export function userReducer(state = initialState, action) {
@@ -26,6 +27,14 @@ export function userReducer(state = initialState, action) {
             isAuthFailed: false,
             authFailureError: '',
         };
+
+        case userActionsTypes.ERROR_CREATE_USER:
+            return {
+                ...state,
+                authenticated: false,
+                isAuthFailed: true,
+                errorRegistrUser: action.errorCreate
+            }
 
         case userActionsTypes.AUTHENTICATION_SUCCESS:
             return {

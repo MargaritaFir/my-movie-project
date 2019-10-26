@@ -10,17 +10,16 @@ submit = (form) => {
         this.props.signIn(form.email, form.password);
     };
 
-
     errorMessage() {
+
         return !this.props.errorMessage ? null : (
             <div className="info-red">
-                {this.props.errorMessage}
+                {'User wasn\'t found'}
             </div>
         );
     }
 
     render() {
-
 
         return (
             <section className="registration">
