@@ -38,7 +38,7 @@ class Search extends Component {
                     </div>
                 </div>
 
-                <div className="poster__row ">
+                <div className="movies__container ">
 
                     { this.props.moviesBase.moviesBase.map((movie,i) => {
                         return <SmallCardForSearch  key={i} {...movie}/>

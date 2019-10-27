@@ -1,127 +1,227 @@
 
-.poster {
-  list-style-type: none;
-  margin-top: 20px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.9), 0 10px 10px rgba(0, 0, 0, 0.9);
+// .poster {
+//   list-style-type: none;
+//   margin-top: 20px;
+//   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.9), 0 10px 10px rgba(0, 0, 0, 0.9);
 
-  &__wrapper {
-    width: 250px;
-    padding: 2px;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    background: white;
+//   &__wrapper {
+//     width: 250px;
+//     padding: 2px;
+//     height: 400px;
+//     position: relative;
+//     overflow: hidden;
+//     background: white;
 
-  }
+//   }
 
-  &__image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+//   &__image {
+//     width: 100%;
+//     height: auto;
+//     object-fit: cover;
 
-  }
+//   }
 
-  a {
-    text-decoration: none;
-    color: black;
-    position: relative;
-  }
-}
-
-.poster__wrapper:hover .poster__info {
-  transform: translateY(0);
-}
-
-.poster__info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  transform: translateY(calc(50px + 1em));
-  transition: transform 0.3s;
-
-}
-
-.poster__content {
-  padding: 0.2em;
-  position: relative;
-  z-index: 1;
-  background-color: #fff;
-  color: black;
-}
-
-.poster__year {
-  padding-top:  10px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.poster__title a {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-top: 10px;
-  color: black;
-}
-
-// .poster__actors {
-//   font-size: 1rem;
-//   margin: 0;
-//   margin-top: 10px;
-//   height: 50px;
+//   a {
+//     text-decoration: none;
+//     color: black;
+//     position: relative;
+//   }
 // }
 
-.poster__info {
-  color: #fff;
-  transform: translateY(calc(50px + 6em));
+// .poster__wrapper:hover .poster__info {
+//   transform: translateY(0);
+// }
+
+// .poster__info {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   transform: translateY(calc(50px + 1em));
+//   transition: transform 0.3s;
+
+// }
+
+// .poster__content {
+//   padding: 0.2em;
+//   position: relative;
+//   z-index: 1;
+//   background-color: #fff;
+//   color: black;
+// }
+
+// .poster__year {
+//   padding-top:  10px;
+//   font-size: 1rem;
+//   font-weight: 600;
+// }
+
+// .poster__title a {
+//   display: block;
+//   font-size: 1.6rem;
+//   font-weight: 600;
+//   margin-top: 10px;
+//   color: black;
+// }
+
+// // .poster__actors {
+// //   font-size: 1rem;
+// //   margin: 0;
+// //   margin-top: 10px;
+// //   height: 50px;
+// // }
+
+// .poster__info {
+//   color: #fff;
+//   transform: translateY(calc(50px + 6em));
+// }
+
+// .poster__button {
+//   display: block;
+//   width: 100px;
+//   margin: 2em auto 1em;
+//   text-align: center;
+//   font-size: 0.9rem;
+//   color: #000;
+//   line-height: 1;
+//   position: relative;
+//   font-weight: 700;
+// }
+
+// .poster__button::after {
+//   content: '\2192';
+//   opacity: 0;
+//   position: absolute;
+//   right: 0;
+//   top: 50%;
+//   transform: translate(0, -50%);
+//   transition: all 0.3s;
+// }
+
+// .poster__button:hover::after {
+//   transform: translate(5px, -50%);
+//   opacity: 1;
+// }
+
+// .poster__rating > span {
+//   font-weight: 800;
+//   background: #FFFF00;
+//   border-radius: 2px;
+//   color: #544C21;
+//   font-size: 1rem;
+//   margin: 5px;
+//   padding: 4px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
+// .poster__row {
+//   margin-top: 20px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//   padding-bottom: 2rem;
+// }
+
+
+
+.movies__container a {
+  text-decoration: none;
+  color: #ddd;
+
 }
 
-.poster__button {
-  display: block;
-  width: 100px;
-  margin: 2em auto 1em;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #000;
-  line-height: 1;
-  position: relative;
-  font-weight: 700;
-}
-
-.poster__button::after {
-  content: '\2192';
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  transition: all 0.3s;
-}
-
-.poster__button:hover::after {
-  transform: translate(5px, -50%);
-  opacity: 1;
-}
-
-.poster__rating > span {
-  font-weight: 800;
-  background: #FFFF00;
-  border-radius: 2px;
-  color: #544C21;
-  font-size: 1rem;
-  margin: 5px;
-  padding: 4px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.poster__row {
-  margin-top: 20px;
+.movies__container {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  width: 95%;
+  padding-top: 30px;
   justify-content: space-around;
-  padding-bottom: 2rem;
+  color: #ddd;
 }
+
+.movie {
+  margin: 5px;
+  padding: 20px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-blend-mode: color;
+  width: 250px;
+
+  height: 400.1px;
+  box-shadow: 10px 10px 10px #111;
+  transition: background-color 0.25s linear;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background-size: cover;
+}
+.movie:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.movie:hover .movie__title,
+.movie:hover .movie__year,
+.movie:hover .movie__imdb_number,
+.movie:hover .movie__rating {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.movie__title {
+  transform: scale(0);
+  opacity: 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: transform 0.24s ease-in 0, opacity 0.3s linear;
+  text-transform: uppercase;
+}
+
+
+
+.movie__year {
+  max-height: 200px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.05s, opacity 0.3s linear;
+}
+
+
+.movie__imdb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  padding: 0 10px;
+}
+.movie__imdb_number{
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.35s, opacity 0.3s linear;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.movie__rating {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.24s ease-in 0.35s, opacity 0.3s linear;
+  min-width: 50px;
+}
+
+.fa-star {
+  width: 9px;
+  font-size: 1.2em;
+  display: inline-block;
+  overflow: hidden;
+}
+.fa-star.checked {
+  color: yellow;
+}
+
+
 
 @media (max-width: 968px) {
   .poster__info {
@@ -146,7 +246,7 @@
     margin-bottom: 10px;
   }
 
-  .poster__wrapper {
+  .movie  {
     height: 400px;
   }
 
@@ -154,7 +254,7 @@
 
 @media (max-width: 992px) {
 
-  .poster__wrapper {
+  .movie {
     width: 220px;
     max-height: 350px;
   }
@@ -162,7 +262,7 @@
 
 @media (max-width: 992px) {
 
-  .poster__wrapper {
+  .movie  {
     width: 180px;
     max-height: 280px;
   }
