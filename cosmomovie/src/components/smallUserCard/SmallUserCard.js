@@ -36,7 +36,7 @@ class SmallUserCard extends Component{
 
 
 
-SmallUserCard.PropTypes ={
+SmallUserCard.propTypes ={
     onAddFriend: PropTypes.func.isRequired,
     onDeleteFriend:PropTypes.func.isRequired,
 }

@@ -72,12 +72,13 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  background-color: #3a4f5b;
   /*==Путь задан относительно index.scss,который находится в папке css=*/
-  background: url(../images/bbb.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  // background: url(../images/bbb.jpg) no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 
 }
 

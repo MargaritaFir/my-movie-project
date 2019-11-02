@@ -47,7 +47,7 @@ class OtherProfileMovie extends Component {
                     {...user}
                 />
 
-                <div className="poster__row ">
+                <div className="movies__container">
 
                     {this.props.userMovies.map((movie, i) => {
                         return <MovieCard {...movie}

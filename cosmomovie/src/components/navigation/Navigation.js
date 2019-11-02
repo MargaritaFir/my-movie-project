@@ -13,7 +13,7 @@ const Navigation = (props)  => {
 
                 <nav role="navigation">
                     <div className="logo">
-                        <h1>CosmoMovies</h1>
+                        <h1>CosmoMov</h1>
                     </div>
                     <div id="menuLarge">
                         <ul className="menu-lg">

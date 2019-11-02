@@ -31,36 +31,46 @@ nav {
 .menu-lg {
 
   display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+  height: 100%;
 }
 .list-item {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  padding-left: 10px;
   text-transform: uppercase;
   color: #ccc;
   list-style: none;
   transition: all 1s ease;
-}
-.list-item:hover {
-  background-color: #DAF0FF;
-  box-shadow: 0 5px 5px rgba(0,0,0,0.5), 0 5px 5px rgba(0,0,0,0.5);
+  height: 100%;
 
 }
 .link {
-  height: 100%;
   display: block;
-  color: #ccc;
-  padding-top: 35px;
-  padding-bottom: 20px;
-  padding-right: 25px;
-  padding-left: 25px;
+  color: inherit;
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none;
-  box-sizing: border-box;
 }
 
+.list-item:hover {
+  background-color: #DAF0FF;
+  color: #2F4F4F;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5), 0 5px 5px rgba(0,0,0,0.5);
+  height: 100%;
+  clip-path: polygon(0 100%, 0 0, 100% 0,100% 100%, 70% 100%, 50% 80%, 30% 100%);
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 0,100% 100%, 70% 100%, 50% 85%, 30% 100%);
+
+}
+
+
+
 .link:hover{
-    color: #2F4F4F;
-    font-weight: 600;
-    padding-bottom: 2px;
+  font-weight: 600;
 }
 .linkActive{
   color: #fff;
@@ -188,6 +198,7 @@ nav {
 
   #menuLarge{
     display: flex;
+    height: 100%;
     margin-right: 0;
   }
 }
