@@ -12,8 +12,8 @@ class SmallUserCard extends Component{
 
         return (
             <div className="people-card">
-                <div className="people-card__avatar">
-                    <img src={this.props.image} alt=""/>
+                <div className="people-card__avatar" style={{backgroundImage: `url(${this.props.image})`}}>
+                    {/* <img src={this.props.image} alt=""/> */}
                 </div>
 
                 <div className="people-card__info ">

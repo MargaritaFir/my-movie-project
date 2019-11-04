@@ -53,12 +53,13 @@ const signIn = (email, password) => dispatch => {
 };
 
 const createUser = (name, NickName, email, password) => {
-
+    const imageArr = ['https://yt3.ggpht.com/a/AGF-l7_D-O7WCG23AXXrKOy28M0_6EYT1-EB-iEBWA=s900-c-k-c0xffffffff-no-rj-mo', 'https://yt3.ggpht.com/a/AGF-l79_KdQQblrsoui8KQYbFZfGaPCIHT6PKs6uPw=s900-mo-c-c0xffffffff-rj-k-no', 'https://mir-s3-cdn-cf.behance.net/projects/max_808/17462091.548c7e0d2ea46.png','https://off-cs.ru/upload/2018/06/12281530060106.jpg', 'https://avatars.mds.yandex.net/get-pdb/1553131/d0748d0c-c8af-4d53-bf5c-d1b8042331a6/s1200']
+    const rand = Math.floor(Math.random()* imageArr.length)
         const newUser = {
             _id: 6,
             name: name,
             NickName: NickName,
-            image: "https://ae01.alicdn.com/kf/HTB1qcQhegZC2uNjSZFnq6yxZpXas/2018.jpg",
+            image: imageArr[rand],
             email: email,
             password: password,
             friends: []
