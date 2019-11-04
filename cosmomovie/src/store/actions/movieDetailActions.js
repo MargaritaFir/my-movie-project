@@ -50,8 +50,8 @@ function addComment(movie) {
 
 
 
-function addNewComment(comment, image, name, movie) {
-        const newComment ={ image, name,comment};
+function addNewComment(comment, image, name, movie, userId, commentDate) {
+        const newComment ={ image, name,comment, userId, commentDate};
         const addedComment = {
             ...movie,
             comments: [  newComment, ...(movie.comments || [])],

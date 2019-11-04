@@ -17,7 +17,10 @@ class SingleLargeMoviePage extends Component {
     }
 
     submit = (form) => {
-        this.props.addComment(form.comment, this.props.loggedUser.image, this.props.loggedUser.name, this.props.movieDetails);
+        if(form.comment!=="" && form.comment!== undefined ){
+            this.props.addComment(form.comment, this.props.loggedUser.image, this.props.loggedUser.name, this.props.movieDetails, this.props.loggedUser._id, this.formatDate());
+        }
+      
     };
 
 
@@ -95,6 +98,18 @@ class SingleLargeMoviePage extends Component {
         this.props.toggleWatchedStatus(movieDetails);
     }
 
+    formatDate() {
+
+        const date = new Date()
+        let dd = date.getDate();
+        if (dd < 10) dd = '0' + dd;
+        let mm = date.getMonth() + 1;
+        if (mm < 10) mm = '0' + mm;
+        let yy = date.getFullYear() % 100;
+        if (yy < 10) yy = '0' + yy; 
+        return dd + '.' + mm + '.' + yy;
+      }
+
 }
 
 
@@ -125,9 +140,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         toggleWatchedStatus: (movieDetails) => dispatch(movieListActions.toggleWatchedStatus(movieDetails)),
 
-        addComment(comment, image, name ,movieDetails) {
+        addComment(comment, image, name ,movieDetails, userId, commentDate) {
 
-            dispatch(movieDetailsActions.addNewComment(comment, image, name, movieDetails.movie ));
+            dispatch(movieDetailsActions.addNewComment(comment, image, name, movieDetails.movie, userId, commentDate ));
         }
     };
 };

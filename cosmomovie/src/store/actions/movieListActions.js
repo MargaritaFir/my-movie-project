@@ -59,14 +59,11 @@ function addNewMovie(movie) {
 
 function addNewMovieList(movie, userId) {
     const addMovie = {
+        nunberMovie: movie.id,
         title: movie.title,
-        //Year: movie.Year,
         release_date: movie.release_date,
-        //Runtime: movie.Runtime,
         overview: movie.overview,
         poster_path: movie.poster_path,
-        //Genre: movie.Genre,
-        //Actors: movie.Actors,
         vote_average: movie.vote_average,
         isAdded: !movie.isAdded,
         isWatched: false,
@@ -112,7 +109,7 @@ function toggleDeleteStatus(movie) {
 
 export function loadMovieList() {
     return (dispatch) => {
-        console.log('loadMovieList');
+
         dispatch(moviesIsLoading(true));
 
         return moviesRequests.getAllMovies()
