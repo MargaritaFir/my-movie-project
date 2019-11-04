@@ -42,7 +42,7 @@ export function movies(state = [], action) {
 
         case movieListActionType.ADD_NEW_MOVIE : {
 
-            return [...state, action.movie];
+            return Object.assign([], state, action.movie);
 
         }
 

@@ -41,14 +41,17 @@ class DetailsCardMovie extends Component{
                                         {
                                             !this.props.isAdded? (
                                         <div className="button__star">
-                                            <label htmlFor="label_star">
+                                            { (!this.userHasThisMovie(this.props.id)) ?                                     
+                                                ( <label htmlFor="label_star">
+                                                
                                                 <input type="checkbox" onChange={this.props.onAdd} name="star"
                                                        id="label_star" defaultChecked={this.props.isAdded}/>
                                                 <span> </span>
-                                            </label>
+                                            </label>) : (<div style={{color:'green', fontWeight: 600}}>This movie is in your collection</div>)
+                                            }
 
                                         </div>): null
-}
+                                        }
 
                             {((this.props.isWatched  === true || this.props.isWatched  === false) && (this.props.movieDetailsUserId === this.props.authUserId) ) ? 
                                  (<div className="button__view">
@@ -79,6 +82,19 @@ class DetailsCardMovie extends Component{
             return `${day} ${arrMonth[month-1]} ${year}`
 
     }
+
+    userHasThisMovie(id){
+        const movieNumber = id;
+        const userAuthId = this.props.authUserId;
+        const userMovies = this.props.movies.filter(movie =>movie.userId ===userAuthId)
+        for(let i=0; i<userMovies.length; i++){
+            if(userMovies[i].nunberMovie === movieNumber){
+                return true
+            }
+        }
+
+        return false;
+    }
 }
 
 
@@ -93,7 +109,9 @@ function mapStateToProps(state) {
     return {
         authenticated: state.user.authenticated,
         authUserId: state.user.userInfo._id,
-        movieDetailsUserId: state.movieDetails.movie.userId
+        movieDetailsUserId: state.movieDetails.movie.userId,
+        movies: state.movies
+
 
     };
 }
