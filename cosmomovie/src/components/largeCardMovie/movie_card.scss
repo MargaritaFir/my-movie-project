@@ -6,9 +6,9 @@
 
 .big-movieCard {
   color: #A9A8A3;
-  margin-top: 12rem;
+  margin-top: 15rem;
   padding:0;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   padding: 3rem 0;
   margin-top: 50px;
@@ -36,7 +36,7 @@
         max-width: 100%;
         border-radius: 10px;
         position: relative;
-        top: -20%;
+        top: -16%;
         box-shadow: 0 4px 14px rgba(0,0,0,0.6), 0 10px 10px rgba(0,0,0,0.7);
         display: flex;
 
@@ -51,7 +51,7 @@
 
 .big-movieCard__poster .imdb {
       position: absolute;
-      right:-15%; top: -15%;
+      right:-15%; top: -14%;
       font-weight: 600;
       background: #FFFF00;
       border-radius: 2px;

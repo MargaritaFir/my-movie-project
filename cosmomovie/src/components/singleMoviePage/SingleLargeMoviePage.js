@@ -50,7 +50,8 @@ class SingleLargeMoviePage extends Component {
             <Fragment>
 
                 <DetailsCardMovie {...movie}
-                                  onWatch={() => this.onWatch(movie)} />
+                                  onWatch={() => this.onWatch(movie)} 
+                                />
 
 
                 <div className="movie-comments">

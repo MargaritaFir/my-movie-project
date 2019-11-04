@@ -23,18 +23,14 @@ class DetailsCardMovie extends Component{
                         <div className="movie-title">{this.props.title}</div>
                         <div className="movie-info">
                             <ul className="movies-actions">
-                                    {/* <li className="year">{this.props.Year}</li>
-                                    <li className="runtime">{this.props.Runtime}</li> */}
+    
                             </ul>
                         </div>
-                        <div className="movie-info"><span>Released: </span>{this.props.release_date}</div>
+                        <div className="movie-info"><span>Released: </span>{this.changeFormatDate(this.props.release_date)}</div>
 
-                        {/* <div className="movie-info"><span>Actors: </span>{this.props.Actors}</div> */}
 
                         <div className="movie-info"><span>Description: </span>{this.props.overview}
                         </div>
-                        {/* <div className="movie-info"><span>Genre: </span>{this.props.Genre}
-                        </div> */}
 
                         {
                             !this.props.authenticated ? null : (
@@ -53,14 +49,16 @@ class DetailsCardMovie extends Component{
 
                                         </div>): null
 }
-                                        <div className="button__view">
-                                            <label htmlFor="label_view">
-                                                <input className="button__star" onChange={this.props.onWatch}
-                                                       type="checkbox" name="view"
-                                                       id="label_view" defaultChecked={this.props.isWatched}/>
-                                                <span> </span>
-                                            </label>
-                                        </div>
+
+                            {((this.props.isWatched  === true || this.props.isWatched  === false) && (this.props.movieDetailsUserId === this.props.authUserId) ) ? 
+                                 (<div className="button__view">
+                                    <label htmlFor="label_view">
+                                        <input className="button__star" onChange={this.props.onWatch}
+                                            type="checkbox" name="view"
+                                            id="label_view" defaultChecked={this.props.isWatched}/>
+                                        <span> </span>
+                                    </label>
+                                </div>) :null } 
 
                                     </div>
                                 </div>)}
@@ -69,6 +67,17 @@ class DetailsCardMovie extends Component{
                 </div>
             </div>
         );
+    }
+
+    changeFormatDate(data){
+        const arrMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'  ]
+        const currentData = data.split('-'),
+            year = currentData[0],
+            month = parseInt(currentData[1]),
+            day = parseInt(currentData[2]);
+
+            return `${day} ${arrMonth[month-1]} ${year}`
+
     }
 }
 
@@ -83,6 +92,8 @@ DetailsCardMovie.propTypes = {
 function mapStateToProps(state) {
     return {
         authenticated: state.user.authenticated,
+        authUserId: state.user.userInfo._id,
+        movieDetailsUserId: state.movieDetails.movie.userId
 
     };
 }

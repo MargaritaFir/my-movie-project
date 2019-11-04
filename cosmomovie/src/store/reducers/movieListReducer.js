@@ -36,6 +36,7 @@ export function movies(state = [], action) {
 
         case movieListActionType.DELETE_MOVIE : {
             const id = action.movie._id;
+            console.log(action.movie)
             return state.filter(m => m._id !== id);
         }
 

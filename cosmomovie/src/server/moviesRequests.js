@@ -87,6 +87,7 @@ function deleteMovie(movie) {
             return response;
         })
         .then((response) => response.json())
+
 }
 
 export const moviesRequests = {

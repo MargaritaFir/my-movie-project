@@ -69,6 +69,7 @@ function addNewMovieList(movie, userId) {
         //Actors: movie.Actors,
         vote_average: movie.vote_average,
         isAdded: !movie.isAdded,
+        isWatched: false,
         userId: userId,
         comments: [],
     };
@@ -105,8 +106,7 @@ function toggleDeleteStatus(movie) {
     return (dispatch) => {
         return moviesRequests
             .deleteMovie(removeMovie)
-            .then(movie => dispatch(deleteMovie(movie)))
-            .then(() => dispatch(loadMovieList()));
+            .then(() => dispatch(deleteMovie(movie)))
     }
 }
 
